@@ -16,40 +16,32 @@ main{
 
 .parent{
   position: relative;
-  width: 440px;
-  height: 336px;
+  width: auto;
+  height: auto;
   background-color: white;
+  padding: 44px;
   margin-bottom: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.content{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 352px;
-  height: 226px;
-  background-color: white;
-}
-
-.content img, h5, input{
+.parent img, h5, input{
   margin-bottom: 16px;
   font-weight: 400;
   line-height: 20px;
 }
 
-.content h2{
-  margin-bottom: 15px;
+.parent h2{
   font-weight: 500;
+  margin-bottom: 12px;
 }
 
 input[type=email] {
-  width: 100%;
+  width: 400px;
+  height: 36px;
   background: transparent;
   border: none;
   border-bottom: 1px solid black;
-  padding: 5px 5px;
+  padding: 5px 5px 5px 0;
   font-size: 15px;
 }
 
@@ -57,22 +49,24 @@ input[type=email]:focus{
   outline: none;
 }
 
-.content button{
+.parent button{
   position: absolute;
-  right: 0;
+  right: 44px;
+  bottom: 52px;
   width: 108px;
   height: 32px;
   background-color: #0067B8;
   color: white;
+  font-size: 16px;
   border: none;
   cursor: pointer;
 }
 
-.content button:hover{
+.parent button:hover{
 background-color:#005da6;
 }
 
-.content button:focus{
+.parent button:focus{
 outline: none
 }
 
@@ -88,13 +82,17 @@ a:hover{
 
 .options{
   background-color: white;
-  width: 440px;
+  width: 488px;
   height: 48px;
   display: flex;
   align-items: center;
   padding-left: 38px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+}
+
+.options:hover{
+  background-color: #e5e5e5;
 }
 
 .options img{
@@ -106,10 +104,6 @@ a:hover{
   padding: 0 12px;
   text-align: left;
   font-weight: 400;
-}
-
-.options:hover{
-  background-color: #e5e5e5;
 }
 
 .footer-div{
@@ -135,7 +129,8 @@ a:hover{
 
 .warning{
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   color: red;
-  margin-bottom: 10px;
+  margin: 12px 0;
+  line-height: 1.5;
 }
