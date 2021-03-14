@@ -1,39 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
 
   <main>
 
-  <div class="parent">
+    <div class="wrapper">
 
-    <img src="images/microsoft-logo.svg" alt="">
-    <h2>Sign in</h2>
-    <input placeholder="Email, phone, or Skype" type="email" name="" value="">
-    <h5>No account? <a href="#">Create one!</h5></a>
-    <h5><a href="#">Sign in with a security key</h5></a><br><br><br><br>
-    <button type="button" name="button">Next</button>
+      <div class="parent1">
 
-  </div>
+        <img src="images/microsoft-logo.svg" alt="">
+        <h2>Sign in</h2>
+        <input id="email-input" placeholder="Email, phone, or Skype" type="email" name="" value="">
+        <h5>No account? <a href="#">Create one!</h5></a>
+        <div class="security-key-div">
+          <h5><a href="#">Sign in with a security key&nbsp;</h5>
+          <img src="images/question-mark.svg" alt="">
+        </div>
+        </a><br><br><br><br>
+        <button type="button" name="button">Next</button>
 
-  <div class="options">
-    <img src="images/sign-in-options.svg" alt="">
-    <h4>Sign-in options</h4>
-  </div>
+      </div>
 
-  <div class="footer-div">
-    <div class="footer-links-div">
-      <h5><a href="#">Terms of use</a> <a href="#">Privacy & cookies</a> <a href="#">· · ·</a></h5>
+      <div class="parent2">
+
+        <img src="images/microsoft-logo.svg" alt="">
+        <h2>Enter Password</h2>
+        <input id="password-input" placeholder="Password" type="email" name="" value="">
+        <div class="checkbox">
+          <input type="checkbox">
+          <h5>Keep me signed in</h5>
+        </div>
+        <h5><a href="#">Forgot password?</h5></a><br>
+        <button type="button" name="button">Sign in</button>
+
+      </div>
     </div>
-  </div>
+
+    <div class="options">
+      <img src="images/sign-in-options.svg" alt="">
+      <h4>Sign-in options</h4>
+    </div>
+
+    <div class="footer-div">
+      <div class="footer-links-div">
+        <h5><a href="#">Terms of use</a> <a href="#">Privacy & cookies</a> <a href="#">· · ·</a></h5>
+      </div>
+    </div>
 
   </main>
 
   <script src="script.js" charset="utf-8"></script>
-  </body>
+</body>
+
 </html>

@@ -14,7 +14,17 @@ main{
   background-image: url(../images/Background.jpg);
 }
 
-.parent{
+.wrapper{
+width: 488px;
+overflow: hidden;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+/* PARENT 1 */
+
+.parent1{
   position: relative;
   width: auto;
   height: auto;
@@ -22,18 +32,20 @@ main{
   padding: 44px;
   margin-bottom: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease-in;
 }
 
-.parent img, h5, input{
+.parent1 img, h5, input{
   margin-bottom: 16px;
   font-weight: 400;
   line-height: 20px;
 }
 
-.parent h2{
+.parent1 h2{
   font-weight: 500;
   margin-bottom: 12px;
 }
+
 
 input[type=email] {
   width: 400px;
@@ -49,12 +61,20 @@ input[type=email]:focus{
   outline: none;
 }
 
-.parent button{
+.security-key-div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.parent1 button{
   position: absolute;
   right: 44px;
   bottom: 52px;
   width: 108px;
   height: 32px;
+  padding: 4px 12px;
   background-color: #0067B8;
   color: white;
   font-size: 16px;
@@ -62,22 +82,12 @@ input[type=email]:focus{
   cursor: pointer;
 }
 
-.parent button:hover{
+.parent1 button:hover{
 background-color:#005da6;
 }
 
-.parent button:focus{
+.parent1 button:focus{
 outline: none
-}
-
-a{
-  color: #0068b8;
-  text-decoration: none;
-}
-
-a:hover{
-  border-bottom: 1px solid grey;
-  color: grey;
 }
 
 .options{
@@ -106,6 +116,97 @@ a:hover{
   font-weight: 400;
 }
 
+/* PARENT 2 */
+
+.parent2{
+  position: relative;
+  width: auto;
+  height: auto;
+  background-color: white;
+  padding: 44px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease-in;
+}
+
+.chosen-mail-div{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.arrow-img:hover{
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.chosen-mail{
+  color: #1b1b1b;
+  font-size: 15px;
+  line-height: 24px;
+  margin-top: 12px;
+}
+
+.parent2 img, h5, input{
+  margin-bottom: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.parent2 h2{
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.parent2 button{
+  position: absolute;
+  right: 44px;
+  bottom: 52px;
+  width: 108px;
+  height: 32px;
+  background-color: #0067B8;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.parent2 button:hover{
+background-color:#005da6;
+}
+
+.parent2 button:focus{
+outline: none
+}
+
+.checkbox{
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+
+.checkbox input{
+  height: 20px;
+  width: 20px;
+}
+.checkbox h5{
+  font-size: 15px;
+  margin-left: 12px;
+}
+
+a{
+  color: #0068b8;
+  text-decoration: none;
+}
+
+a:hover{
+  border-bottom: 1px solid grey;
+  color: grey;
+}
+
+/* FOOTER */
+
 .footer-div{
   position: absolute;
   bottom: 0;
@@ -127,10 +228,57 @@ a:hover{
   color: #000;
 }
 
-.warning{
+.error-msg{
   font-weight: 400;
   font-size: 16px;
   color: red;
   margin: 12px 0;
   line-height: 1.5;
+}
+
+
+@media screen and (max-width: 660px){
+
+  main{
+    background: none;
+    justify-content: flex-start;
+  }
+
+  .parent1{
+    box-shadow: none;
+  }
+
+  .options{
+    box-shadow: none;
+    border: 1px solid #747474;
+    max-width: 400px;
+  }
+
+  .parent2{
+    box-shadow: none;
+  }
+
+  .footer-div{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .footer-div div{
+    width:300px;
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    line-height: 28px;
+  }
+
+  .footer-div a{
+    font-size: 12px;
+    margin: 0 8px;
+    color: #747474;
+  }
+
+
+
 }
